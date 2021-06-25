@@ -12,4 +12,4 @@ RUN \
 CMD ["nginx"]
 
 #exposing port 80 of the container
-EXPOSE 80
+EXPOSE 8080
