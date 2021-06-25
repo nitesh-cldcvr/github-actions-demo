@@ -24,7 +24,7 @@ jobs:
 
      # Runs a single command using the runners shell
       - name: Build nginx image
-        run: docker build ./nginx
+        run: docker build .
         
 
       - name: Build and Push docker image
