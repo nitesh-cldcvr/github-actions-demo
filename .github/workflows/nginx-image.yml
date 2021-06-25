@@ -21,10 +21,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-     # Runs a single command using the runners shell
-      - name: Build nginx image
-        run: docker build .
         
 
       - name: Build and Push docker image
@@ -32,6 +28,6 @@ jobs:
         with:
           image: niteshb3495/github-actions
           registry: docker.io
-          dockerfile: nginx/Dockerfile 
+          dockerfile: ./Dockerfile 
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
